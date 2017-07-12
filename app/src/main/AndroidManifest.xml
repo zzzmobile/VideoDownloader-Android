@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="downloader.video.usmans.videodownloader">
+
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:name="downloader.video.usmans.videodownloader.DownloaderApp"
+        android:theme="@style/AppTheme"
+        tools:replace="android:theme">
+        <meta-data android:name="applovin.sdk.key"
+            android:value="cfw1EZTz9M8dhNyOZJWF9Bqm9x2m0fKcKFdZpBXyTfZE2Wdbq8s-KgkUbnEbRTDnosKb1sTZV7pXdR8Sa-Qve9"  />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <activity android:name="com.applovin.adview.AppLovinInterstitialActivity" />
+        <activity android:name="com.applovin.adview.AppLovinConfirmationActivity" />
+        <activity
+            android:name="downloader.video.usmans.videodownloader.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="downloader.video.usmans.videodownloader.BookmarkActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="downloader.video.usmans.videodownloader.MainActivity" />
+        </activity>
+        <activity
+            android:name="downloader.video.usmans.videodownloader.SettingActivity"
+            android:label="Settings"
+            android:theme="@style/AppTheme"
+            >
+
+        </activity>
+
+
+    </application>
+
+</manifest>
